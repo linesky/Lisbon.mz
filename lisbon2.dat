@@ -1,0 +1,173 @@
+
+main:
+;declare,main
+call ringa0
+;declare,drawwindow
+call ringa1
+;function,main
+call ringa2
+; sub, MAIN:
+sub133:
+	mov di,varnext0
+	cs
+	mov [di],eax
+	mov di,varnext1
+	cs
+	mov [di],ebx
+	mov di,varnext2
+	cs
+	mov [di],ecx
+	mov di,varnext3
+	cs
+	mov [di],edx
+;	;,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+call ringa3
+;	const,0,8,1,2,3,64,256
+call ringa4
+;	integer,rectpoint,0
+call ringa5
+;	integer,rectx,0
+call ringa6
+;	integer,recty,0
+call ringa7
+;	integer,rectw,300
+call ringa8
+;	integer,recth,200
+call ringa9
+;	integer,rectcolor,17
+call ringa10
+;	integer,rectn,0
+call ringa11
+;
+call ringa12
+;	;,code
+call ringa13
+;	pointer,rectpoint,rectpoint
+call ringa14
+;	screen,256
+call ringa16
+;	back,0
+call ringa18
+;		for,rectn,0,8,1#drawwindow,rectpoint,rectn,0,0
+call ringa20
+;	doevents
+call ringa23
+;	timer.sleep,64
+call ringa25
+;	screen,3
+call ringa27
+;function,drawwindow
+call ringa29
+ret
+; sub, DRAWWINDOW:
+sub134:
+	mov di,varnext18
+	cs
+	mov [di],eax
+	mov di,varnext19
+	cs
+	mov [di],ebx
+	mov di,varnext20
+	cs
+	mov [di],ecx
+	mov di,varnext21
+	cs
+	mov [di],edx
+;	;,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+call ringa30
+;	const,0,8,1,28,64,15
+call ringa31
+;	integer,rectpoint,0
+call ringa32
+;	integer,rectx,0
+call ringa33
+;	integer,recty,0
+call ringa34
+;	integer,rectw,0
+call ringa35
+;	integer,recth,0
+call ringa36
+;	integer,rectcolor,0
+call ringa37
+;	integer,rectn,0
+call ringa38
+;	integer,rectx2,0
+call ringa39
+;	integer,recty2,0
+call ringa40
+;
+call ringa41
+;	;,code
+call ringa42
+;	pointer,argv2,rectpoint
+call ringa43
+;	memcopy,argv2,argv0,28
+call ringa45
+;	eval,rectx,rectn*20
+call ringa47
+;	eval,recty,rectn*20
+call ringa49
+;	eval,rectx2,rectx+rectw
+call ringa51
+;	eval,recty2,recty+recth
+call ringa53
+;	box,rectx,recty,rectx2,recty2,rectcolor
+call ringa55
+;	hline,rectx,recty,rectx2,15
+call ringa57
+;	vline,rectx2,recty,recty2,15
+call ringa59
+;	hline,rectx,recty2,rectx2,15
+call ringa61
+;	vline,rectx,recty,recty2,15
+call ringa63
+;	eval,rectcolor,rectcolor+1
+call ringa65
+;	memcopy,argv0,argv2,28	
+call ringa67
+;
+call ringa69
+;
+call ringa70
+;
+call ringa71
+;
+call ringa72
+;
+call ringa73
+;
+call ringa74
+;
+call ringa75
+;
+call ringa76
+;
+call ringa77
+;
+call ringa78
+;
+call ringa79
+;
+call ringa80
+;
+call ringa81
+;
+call ringa82
+;
+call ringa83
+;
+call ringa84
+;
+call ringa85
+;
+call ringa86
+;
+call ringa87
+;
+call ringa88
+;
+call ringa89
+
+ret
+
+ret

@@ -1,0 +1,907 @@
+;declare,main
+ringa0:
+ret
+;declare,drawwindow
+ringa1:
+ret
+;function,main
+ringa2:
+ret
+;	;,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+; , xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ringa3:
+ret
+;	const,0,8,1,2,3,64,256
+ringa4:
+ret
+;	integer,rectpoint,0
+ring5:
+	mov eax,0
+	mov bx,varnext11
+	cs
+	mov [bx],eax
+ret
+ringa5:
+ret
+;	integer,rectx,0
+ring6:
+	mov eax,0
+	mov bx,varnext12
+	cs
+	mov [bx],eax
+ret
+ringa6:
+ret
+;	integer,recty,0
+ring7:
+	mov eax,0
+	mov bx,varnext13
+	cs
+	mov [bx],eax
+ret
+ringa7:
+ret
+;	integer,rectw,300
+ring8:
+	mov eax,300
+	mov bx,varnext14
+	cs
+	mov [bx],eax
+ret
+ringa8:
+ret
+;	integer,recth,200
+ring9:
+	mov eax,200
+	mov bx,varnext15
+	cs
+	mov [bx],eax
+ret
+ringa9:
+ret
+;	integer,rectcolor,17
+ring10:
+	mov eax,17
+	mov bx,varnext16
+	cs
+	mov [bx],eax
+ret
+ringa10:
+ret
+;	integer,rectn,0
+ring11:
+	mov eax,0
+	mov bx,varnext17
+	cs
+	mov [bx],eax
+ret
+ringa11:
+ret
+ringa12:
+ret
+;	;,code
+; , code
+ringa13:
+ret
+;	pointer,rectpoint,rectpoint
+	ringa14:
+	mov si,varnext11
+	mov ax,cs
+	call MEM32
+	mov di,varnext11
+	cs
+	mov [di],eax
+	call ringa15
+	ret
+ringa15:
+ret
+;	screen,256
+	ringa16:
+	mov si,varnext10
+	cs
+	mov eax,[si]
+	call scr
+	call ringa17
+	ret
+ringa17:
+ret
+;	back,0
+	ringa18:
+	mov bx,varnext4
+	cs
+	mov al,[bx]
+	mov edi,140000h
+	mov ecx,64000
+	push ds
+	push es
+	mov edx,0
+	mov ds,dx
+	mov es,dx
+	call memfilld
+	pop es
+	pop ds
+	call ringa19
+	ret
+ringa19:
+ret
+;		for,rectn,0,8,1
+	ringa20:
+	mov si,varnext4
+	cs
+	mov eax,[si]
+	mov di,varnext17
+	cs
+	mov [di],eax
+	lineno18:
+	call ringa21
+	mov si,varnext17
+	cs
+	mov eax,[si]
+	mov si,varnext6
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext17
+	cs
+	mov [di],eax
+	mov si,varnext5
+	cs
+	mov ebx,[si]
+	cmp eax,ebx
+	jle lineno18 
+
+	ret
+;drawwindow,rectpoint,rectn,0,0
+ringa21:
+	mov si,varnext11
+	cs
+	mov eax,[si]
+	mov si,varnext17
+	cs
+	mov ebx,[si]
+	mov si,varnext4
+	cs
+	mov ecx,[si]
+	mov si,varnext4
+	cs
+	mov edx,[si]
+	call sub134
+call ringa22
+ret
+ringa22:
+ret
+;	doevents
+	ringa23:
+	call setvideo
+	call ringa24
+	ret
+ringa24:
+ret
+;	timer.sleep,64
+	ringa25:
+	mov bx,varnext9
+	cs
+	mov eax,[bx]
+	call sleep
+	call ringa26
+	ret
+ringa26:
+ret
+;	screen,3
+	ringa27:
+	mov si,varnext8
+	cs
+	mov eax,[si]
+	call scr
+	call ringa28
+	ret
+ringa28:
+ret
+;function,drawwindow
+ringa29:
+ret
+;	;,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+; , xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ringa30:
+ret
+;	const,0,8,1,28,64,15
+ringa31:
+ret
+;	integer,rectpoint,0
+ring32:
+	mov eax,0
+	mov bx,varnext28
+	cs
+	mov [bx],eax
+ret
+ringa32:
+ret
+;	integer,rectx,0
+ring33:
+	mov eax,0
+	mov bx,varnext29
+	cs
+	mov [bx],eax
+ret
+ringa33:
+ret
+;	integer,recty,0
+ring34:
+	mov eax,0
+	mov bx,varnext30
+	cs
+	mov [bx],eax
+ret
+ringa34:
+ret
+;	integer,rectw,0
+ring35:
+	mov eax,0
+	mov bx,varnext31
+	cs
+	mov [bx],eax
+ret
+ringa35:
+ret
+;	integer,recth,0
+ring36:
+	mov eax,0
+	mov bx,varnext32
+	cs
+	mov [bx],eax
+ret
+ringa36:
+ret
+;	integer,rectcolor,0
+ring37:
+	mov eax,0
+	mov bx,varnext33
+	cs
+	mov [bx],eax
+ret
+ringa37:
+ret
+;	integer,rectn,0
+ring38:
+	mov eax,0
+	mov bx,varnext34
+	cs
+	mov [bx],eax
+ret
+ringa38:
+ret
+;	integer,rectx2,0
+ring39:
+	mov eax,0
+	mov bx,varnext35
+	cs
+	mov [bx],eax
+ret
+ringa39:
+ret
+;	integer,recty2,0
+ring40:
+	mov eax,0
+	mov bx,varnext36
+	cs
+	mov [bx],eax
+ret
+ringa40:
+ret
+ringa41:
+ret
+;	;,code
+; , code
+ringa42:
+ret
+;	pointer,argv2,rectpoint
+	ringa43:
+	mov si,varnext28
+	mov ax,cs
+	call MEM32
+	mov di,varnext20
+	cs
+	mov [di],eax
+	call ringa44
+	ret
+ringa44:
+ret
+;	memcopy,argv2,argv0,28
+	ringa45:
+	mov si,varnext20
+	cs
+	mov edi,[si]
+	mov si,varnext25
+	cs
+	mov ecx,[si]
+	mov bx,varnext18
+	cs
+	mov esi,[bx]
+	mov bp,0
+	mov ds,bp
+	mov es,bp
+	call memcopy
+	mov ax,cs
+	mov ds,ax
+	mov es,ax
+	call ringa46
+	ret
+ringa46:
+ret
+;	eval,rectx,rectn*20
+	ringa47:
+
+	mov si,varnext34
+	cs
+	mov eax,[si]
+	mov si,varnext39
+	cs
+	mov ebx,[si]
+	mov ecx,0
+	mov edx,0
+	clc
+	mul ebx
+	mov di,varnext38
+	cs
+	mov [di],eax
+
+	mov si,varnext41
+	cs
+	mov eax,[si]
+	mov si,varnext38
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext42
+	cs
+	mov [di],eax
+
+	mov si,varnext42
+	cs
+	mov eax,[si]
+	mov si,varnext44
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext43
+	cs
+	mov [di],eax
+
+	mov bx,varnext43
+	cs
+	mov eax,[bx]
+	mov bx,varnext29
+	cs
+	mov [bx],eax
+	call ringa48
+	ret
+ringa48:
+ret
+;	eval,recty,rectn*20
+	ringa49:
+
+	mov si,varnext34
+	cs
+	mov eax,[si]
+	mov si,varnext47
+	cs
+	mov ebx,[si]
+	mov ecx,0
+	mov edx,0
+	clc
+	mul ebx
+	mov di,varnext46
+	cs
+	mov [di],eax
+
+	mov si,varnext49
+	cs
+	mov eax,[si]
+	mov si,varnext46
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext50
+	cs
+	mov [di],eax
+
+	mov si,varnext50
+	cs
+	mov eax,[si]
+	mov si,varnext52
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext51
+	cs
+	mov [di],eax
+
+	mov bx,varnext51
+	cs
+	mov eax,[bx]
+	mov bx,varnext30
+	cs
+	mov [bx],eax
+	call ringa50
+	ret
+ringa50:
+ret
+;	eval,rectx2,rectx+rectw
+	ringa51:
+
+	mov si,varnext29
+	cs
+	mov eax,[si]
+	mov si,varnext31
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext55
+	cs
+	mov [di],eax
+
+	mov si,varnext55
+	cs
+	mov eax,[si]
+	mov si,varnext57
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext56
+	cs
+	mov [di],eax
+
+	mov bx,varnext56
+	cs
+	mov eax,[bx]
+	mov bx,varnext35
+	cs
+	mov [bx],eax
+	call ringa52
+	ret
+ringa52:
+ret
+;	eval,recty2,recty+recth
+	ringa53:
+
+	mov si,varnext30
+	cs
+	mov eax,[si]
+	mov si,varnext32
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext60
+	cs
+	mov [di],eax
+
+	mov si,varnext60
+	cs
+	mov eax,[si]
+	mov si,varnext62
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext61
+	cs
+	mov [di],eax
+
+	mov bx,varnext61
+	cs
+	mov eax,[bx]
+	mov bx,varnext36
+	cs
+	mov [bx],eax
+	call ringa54
+	ret
+ringa54:
+ret
+;	box,rectx,recty,rectx2,recty2,rectcolor
+	ringa55:
+	mov si,varnext29
+	cs
+	mov ax,[si]
+	mov si,boxdx
+	cs
+	mov [si],ax
+	mov si,varnext30
+	cs
+	mov ax,[si]
+	mov si,boxdy
+	cs
+	mov [si],ax
+	mov si,varnext35
+	cs
+	mov ax,[si]
+	mov si,boxdx1
+	cs
+	mov [si],ax
+	mov si,varnext36
+	cs
+	mov ax,[si]
+	mov si,boxdy1
+	cs
+	mov [si],ax
+	mov si,varnext33
+	cs
+	mov al,[si]
+	mov si,boxdcolor
+	cs
+	mov [si],al
+	call boxd32
+	mov si,varnext29
+	xor eax,eax
+	cs
+	mov ax,[si]
+	mov si,varnext35
+	xor ebx,ebx
+	cs
+	mov bx,[si]
+	sub ebx,eax
+	mov eax,ebx
+	push eax
+	xor ecx,ecx
+	xor edx,edx
+	mov ebx,4
+	div ebx
+	xor ecx,ecx
+	xor edx,edx
+	mul ebx
+	pop ebx
+	sub ebx,eax
+	mov si,varnext35
+	xor eax,eax
+	cs
+	mov ax,[si]
+	sub eax,ebx
+	mov si,boxx
+	mov [si],ax
+	mov si,varnext30
+	mov ax,[si]
+	mov si,boxy
+	mov [si],ax
+	mov si,varnext35
+	mov ax,[si]
+	mov si,boxx1
+	mov [si],ax
+	mov si,varnext36
+	mov ax,[si]
+	mov si,boxy1
+	mov [si],ax
+	mov si,varnext33
+	mov al,[si]
+	mov si,boxcolor
+	mov [si],al
+	call box32
+	call ringa56
+	ret
+ringa56:
+ret
+;	hline,rectx,recty,rectx2,15
+	ringa57:
+	mov si,varnext29
+	cs
+	mov ax,[si]
+	mov si,hlinex
+	cs
+	mov [si],ax
+	mov si,varnext30
+	cs
+	mov ax,[si]
+	mov si,hliney
+	cs
+	mov [si],ax
+	mov si,varnext35
+	cs
+	mov ax,[si]
+	mov si,hlinex1
+	cs
+	mov [si],ax
+	mov si,varnext27
+	cs
+	mov al,[si]
+	mov si,hlinecolor
+	cs
+	mov [si],al
+	call hlined32
+	mov si,varnext29
+	xor eax,eax
+	cs
+	mov ax,[si]
+	mov si,varnext35
+	xor ebx,ebx
+	cs
+	mov bx,[si]
+	sub ebx,eax
+	mov eax,ebx
+	push eax
+	xor ecx,ecx
+	xor edx,edx
+	mov ebx,4
+	div ebx
+	xor ecx,ecx
+	xor edx,edx
+	mul ebx
+	pop ebx
+	sub ebx,eax
+	mov si,varnext35
+	xor eax,eax
+	cs
+	mov ax,[si]
+	sub eax,ebx
+	mov si,hlinex
+	cs
+	mov [si],ax
+	mov si,varnext30
+	cs
+	mov ax,[si]
+	mov si,hliney
+	cs
+	mov [si],ax
+	mov si,varnext35
+	cs
+	mov ax,[si]
+	mov si,hlinex1
+	cs
+	mov [si],ax
+	mov si,varnext27
+	cs
+	mov al,[si]
+	mov si,hlinecolor
+	cs
+	mov [si],al
+	call hlined32
+	call ringa58
+	ret
+ringa58:
+ret
+;	vline,rectx2,recty,recty2,15
+	ringa59:
+	mov si,varnext35
+	cs
+	mov ax,[si]
+	mov si,vlinex
+	cs
+	mov [si],ax
+	mov si,varnext30
+	cs
+	mov ax,[si]
+	mov si,vliney
+	cs
+	mov [si],ax
+	mov si,varnext36
+	cs
+	mov ax,[si]
+	mov si,vliney1
+	cs
+	mov [si],ax
+	mov si,varnext27
+	cs
+	mov al,[si]
+	mov si,vlinecolor
+	cs
+	mov [si],al
+	call vline32
+	call ringa60
+	ret
+ringa60:
+ret
+;	hline,rectx,recty2,rectx2,15
+	ringa61:
+	mov si,varnext29
+	cs
+	mov ax,[si]
+	mov si,hlinex
+	cs
+	mov [si],ax
+	mov si,varnext36
+	cs
+	mov ax,[si]
+	mov si,hliney
+	cs
+	mov [si],ax
+	mov si,varnext35
+	cs
+	mov ax,[si]
+	mov si,hlinex1
+	cs
+	mov [si],ax
+	mov si,varnext27
+	cs
+	mov al,[si]
+	mov si,hlinecolor
+	cs
+	mov [si],al
+	call hlined32
+	mov si,varnext29
+	xor eax,eax
+	cs
+	mov ax,[si]
+	mov si,varnext35
+	xor ebx,ebx
+	cs
+	mov bx,[si]
+	sub ebx,eax
+	mov eax,ebx
+	push eax
+	xor ecx,ecx
+	xor edx,edx
+	mov ebx,4
+	div ebx
+	xor ecx,ecx
+	xor edx,edx
+	mul ebx
+	pop ebx
+	sub ebx,eax
+	mov si,varnext35
+	xor eax,eax
+	cs
+	mov ax,[si]
+	sub eax,ebx
+	mov si,hlinex
+	cs
+	mov [si],ax
+	mov si,varnext36
+	cs
+	mov ax,[si]
+	mov si,hliney
+	cs
+	mov [si],ax
+	mov si,varnext35
+	cs
+	mov ax,[si]
+	mov si,hlinex1
+	cs
+	mov [si],ax
+	mov si,varnext27
+	cs
+	mov al,[si]
+	mov si,hlinecolor
+	cs
+	mov [si],al
+	call hlined32
+	call ringa62
+	ret
+ringa62:
+ret
+;	vline,rectx,recty,recty2,15
+	ringa63:
+	mov si,varnext29
+	cs
+	mov ax,[si]
+	mov si,vlinex
+	cs
+	mov [si],ax
+	mov si,varnext30
+	cs
+	mov ax,[si]
+	mov si,vliney
+	cs
+	mov [si],ax
+	mov si,varnext36
+	cs
+	mov ax,[si]
+	mov si,vliney1
+	cs
+	mov [si],ax
+	mov si,varnext27
+	cs
+	mov al,[si]
+	mov si,vlinecolor
+	cs
+	mov [si],al
+	call vline32
+	call ringa64
+	ret
+ringa64:
+ret
+;	eval,rectcolor,rectcolor+1
+	ringa65:
+
+	mov si,varnext33
+	cs
+	mov eax,[si]
+	mov si,varnext67
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext66
+	cs
+	mov [di],eax
+
+	mov si,varnext66
+	cs
+	mov eax,[si]
+	mov si,varnext69
+	cs
+	mov ebx,[si]
+	clc
+	add eax,ebx
+	mov di,varnext68
+	cs
+	mov [di],eax
+
+	mov bx,varnext68
+	cs
+	mov eax,[bx]
+	mov bx,varnext33
+	cs
+	mov [bx],eax
+	call ringa66
+	ret
+ringa66:
+ret
+;	memcopy,argv0,argv2,28	
+	ringa67:
+	mov si,varnext18
+	cs
+	mov edi,[si]
+	mov si,varnext25
+	cs
+	mov ecx,[si]
+	mov bx,varnext20
+	cs
+	mov esi,[bx]
+	mov bp,0
+	mov ds,bp
+	mov es,bp
+	call memcopy
+	mov ax,cs
+	mov ds,ax
+	mov es,ax
+	call ringa68
+	ret
+ringa68:
+ret
+ringa69:
+ret
+ringa70:
+ret
+ringa71:
+ret
+ringa72:
+ret
+ringa73:
+ret
+ringa74:
+ret
+ringa75:
+ret
+ringa76:
+ret
+ringa77:
+ret
+ringa78:
+ret
+ringa79:
+ret
+ringa80:
+ret
+ringa81:
+ret
+ringa82:
+ret
+ringa83:
+ret
+ringa84:
+ret
+ringa85:
+ret
+ringa86:
+ret
+ringa87:
+ret
+ringa88:
+ret
+ringa89:
+ret
