@@ -352,7 +352,10 @@ void head(){
 			addcode (".overlay: dw start          ; overlay value (0h = main program)");
 			addcode (".overlay2: dw 0");
 			addcode (".reserv : times 1 db 0x90 ");
-			addcode ("mainstart: db 090h   "); 
+			addcode ("mainstart: db 090h   ");
+			addcode ("mov ax,cs   ");
+			addcode ("mov ds,ax   ");
+			addcode ("mov es,ax   ");
 			addcode ("main1:");
 			addcode ("jmp start");
 			addcode ("db 'build in lisbon32 developer tools.... '");
